@@ -1,0 +1,29 @@
+- id: iphone_sunrise_note
+  alias: Notify iOS app about the sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-00:10:00"
+  action:
+    service: notify.ios_elises_iphone
+    data:
+      title: "Sunrise Alerts"
+      message: "The sun will rise soon!"
+      data:
+        push:
+          badge: 0
+
+- id: iphone_sunset_note
+  alias: Notify iOS app about the sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:10:00"
+  action:
+    service: notify.ios_elises_iphone
+    data:
+      title: "Sunset Alerts"
+      message: "The sun will set in 10 minutes."
+      data:
+        push:
+          badge: 0

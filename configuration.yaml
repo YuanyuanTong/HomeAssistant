@@ -1,0 +1,49 @@
+homeassistant:
+  name: SLC_Home
+  unit_system: metric
+  temperature_unit: C
+  time_zone: !secret home_time_zone
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+    
+# Activate the configuration editor
+config:
+
+# Load the sun integration
+sun:
+
+# Load the discovery integration
+discovery:
+
+# Load the System Health component
+system_health:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+# Load the iOS integration
+ios:
+
+# Load the Google Calendar component
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+
+# Xfinity Gateway integration for presence detection
+device_tracker:
+  - platform: xfinity
+    host: 67.172.238.63
+  - platform: icloud
+    username: !secret icloud_username
+    password: !secret icloud_password
+    account_name: elise_icloud
+    

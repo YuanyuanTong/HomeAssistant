@@ -1,0 +1,21 @@
+
+- cal_id: u1142943@gcloud.utah.edu
+  entities:
+  - device_id: u1142943_gcloud_utah_edu
+    ignore_availability: true
+    name: u1142943@gcloud.utah.edu
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: false
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+    track: false
