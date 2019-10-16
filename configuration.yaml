@@ -41,7 +41,7 @@ google:
 # Xfinity Gateway integration for presence detection
 device_tracker:
   - platform: xfinity
-    host: 67.172.238.63
+    host: !secret home_router_ip
   - platform: icloud
     username: !secret icloud_username
     password: !secret icloud_password
